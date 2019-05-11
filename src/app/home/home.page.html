@@ -8,7 +8,15 @@
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Enter URL</ion-label>
+        <ion-input #input type="url"></ion-input>
+      </ion-item>
+        <!-- <ion-button (click)="downloadFile(input.value)" expand="full">Angular Download</ion-button> -->
+        <ion-button (click)="downloadFileWithFileTransfer(input.value)" expand="full">Download File Transfer</ion-button>
+    </ion-list>
+    <ion-progress-bar *ngIf="percentage >0" [value]=percentage></ion-progress-bar>
+
   </div>
 </ion-content>
