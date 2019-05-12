@@ -16,7 +16,7 @@
         <!-- <ion-button (click)="downloadFile(input.value)" expand="full">Angular Download</ion-button> -->
         <ion-button (click)="downloadFileWithFileTransfer(input.value)" expand="full">Download File Transfer</ion-button>
     </ion-list>
-    <ion-progress-bar *ngIf="percentage >0" [value]=percentage></ion-progress-bar>
-
+    <!-- <ion-progress-bar *ngIf="percentage >0" [value]=percentage></ion-progress-bar> -->
+    <ion-progress-bar *ngIf="showProgressBar" type="indeterminate"></ion-progress-bar>
   </div>
 </ion-content>

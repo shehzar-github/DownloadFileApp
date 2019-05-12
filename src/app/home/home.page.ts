@@ -19,10 +19,12 @@ export class HomePage {
    fileTransfer: FileTransferObject = this.transfer.create()
   
   downloadFileWithFileTransfer(url){
-    //let downloadUrl = 'https://devdactic.com/html/5-simple-hacks-LBT.pdf';
-    this.fileTransfer.download(url, this.file.dataDirectory + 'file.pdf').then((entry) => {
+    this. showProgressBar=true;
+    let downloadUrl = 'https://devdactic.com/html/5-simple-hacks-LBT.pdf';
+    this.fileTransfer.download(downloadUrl, this.file.dataDirectory + 'file.pdf').then((entry) => {
       console.log('download complete: ' + entry.toURL());
      // this.percentage=0;
+     this.showProgressBar=false;
     }, (error) => {
       // handle error
       console.log(error);
